@@ -1,0 +1,16 @@
+.btn {
+    min-width: 18em;
+    height: 37px;
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
