@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { LoginForm, RegisterForm } from './login_register/index';
+import { Homepage } from './tenant';
 
 const MainPage = ({}) => {
 
@@ -14,6 +15,7 @@ const MainPage = ({}) => {
         <Routes>
           <Route exact path='' element={<LoginForm />} />
           <Route exact path='/signup' element={<RegisterForm />} />
+          <Route exact path='/home' element={<Homepage />} />
         </Routes>
       </Router>
     )

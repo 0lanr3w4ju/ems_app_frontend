@@ -9,7 +9,10 @@ import Button from "../reusables/button";
 
 
 const RegisterForm = ({}) => {
+    
+    // const api = 'https://agile-ravine-89696.herokuapp.com/user'
     const api = 'http://localhost:8000/user'
+    
     const [data, setData] = useState({
         firstname: '',
         lastname: '',
@@ -17,7 +20,7 @@ const RegisterForm = ({}) => {
         email: '',
         phone: '',
         password: '',
-        password_1: ''
+        password_1: '',
     });
 
     const notify_success = () => toast.info('Success');
@@ -27,7 +30,7 @@ const RegisterForm = ({}) => {
         Array.from(document.querySelectorAll('input'))
         .forEach(input => (input.value = ''));
         setData({data})
-    }
+    };
 
     const handle_change = (e) => {
         const value = e.target.value;
@@ -49,7 +52,6 @@ const RegisterForm = ({}) => {
 
         axios.post(api, userData)
         .then((response) => {
-            // console.log(response);
             if (response.status === 201) {
                 setTimeout(() => {notify_success()}, 200);
                 handle_reset();
